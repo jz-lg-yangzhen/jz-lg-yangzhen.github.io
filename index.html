@@ -152,6 +152,80 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-tomcat-404" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/31/tomcat-404/">tomcat-404:源服务器未能找到目标资源的表示或者是不愿公开一个已经存在的资源表示</a>
+    </h1>
+  
+
+        
+        <a href="/2020/03/31/tomcat-404/" class="archive-article-date">
+  	<time datetime="2020-03-31T11:21:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-31</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="错误形式："><a href="#错误形式：" class="headerlink" title="错误形式："></a>错误形式：</h4><p>浏览器访问部署到tomcat上的项目时无法显示，提示404：:源服务器未能找到目标资源的表示或者是不愿公开一个已经存在的资源表示</p>
+<h4 id="我的tomcat版本为7-0-99"><a href="#我的tomcat版本为7-0-99" class="headerlink" title="我的tomcat版本为7.0.99"></a>我的tomcat版本为7.0.99</h4><h4 id="原因："><a href="#原因：" class="headerlink" title="原因："></a>原因：</h4><pre><code>1. 目录结构原因：
+    把jsp或html文件放在web-inf文件夹下。客户端无法访问此文件夹下内容。
+2. 项目并未部署到tomcat：
+    查看tomcat安装目录下的webapps文件夹下是否有自己的项目.
+    如果没有，说明项目没有部署到tomcat。
+3. 项目存在错误：
+    查看控制台是否有报错。</code></pre><h4 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h4><pre><code>1. 把jsp或html放在webcontent下。
+2. 1. 双击或右键点击open，server下的tomcat vx.x Server at localhost。
+    2. remove掉tomcat里的项目
+    3. 把server locations选为use tomcat installation...
+3. 查看控制台报错，定位到错误代码，修改。</code></pre><p>参考：<a href="https://blog.csdn.net/weixin_42223850/article/details/104543803" target="_blank" rel="noopener">参考资料1：csdn</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/03/31/tomcat-404/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-markdown语法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
