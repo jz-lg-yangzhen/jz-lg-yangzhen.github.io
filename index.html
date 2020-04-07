@@ -57,6 +57,12 @@
 	        
 				<li><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
 	        
+				<li><a href="/photos/">相处</a></li>
+	        
+				<li><a href="/archives/index.html">归档</a></li>
+	        
+				<li><a href="/archives">全部文章</a></li>
+	        
 			</ul>
 		</nav>
 		<nav class="header-smart-menu">
@@ -113,6 +119,12 @@
 			
 				
 			
+				
+			
+				
+			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -130,12 +142,18 @@
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 20%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+					<li style="width: 20%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+		        
+					<li style="width: 20%"><a href="/photos/">相处</a></li>
+		        
+					<li style="width: 20%"><a href="/archives/index.html">归档</a></li>
+		        
+					<li style="width: 20%"><a href="/archives">全部文章</a></li>
 		        
 				</ul>
 			</nav>
@@ -151,6 +169,668 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-js基础1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/07/js%E5%9F%BA%E7%A1%801/">js基础1</a>
+    </h1>
+  
+
+        
+        <a href="/2020/04/07/js%E5%9F%BA%E7%A1%801/" class="archive-article-date">
+  	<time datetime="2020-04-07T03:59:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="一、基础"><a href="#一、基础" class="headerlink" title="一、基础"></a>一、基础</h3><h4 id="注释："><a href="#注释：" class="headerlink" title="注释："></a>注释：</h4><p>//及/* */</p>
+<h4 id="1-标识符、数据类型"><a href="#1-标识符、数据类型" class="headerlink" title="1.标识符、数据类型"></a>1.标识符、数据类型</h4><h4 id="2-变量"><a href="#2-变量" class="headerlink" title="2.变量"></a>2.变量</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var 变量名,变量名2,...,变量名n;</span><br></pre></td></tr></table></figure>
+<h4 id="3-运算符和表达式"><a href="#3-运算符和表达式" class="headerlink" title="3.运算符和表达式"></a>3.运算符和表达式</h4><pre><code>1. 算数运算符：+,-,*,/,%,++,--等;
+2. 赋值运算符：=,+=,-=,...,&gt;&gt;=,&lt;&lt;=,&amp;=,|=,^=;
+3. 逻辑运算符：&amp;&amp;,||,!;
+4. 关系运算符：==,!=,...等;
+5. 条件运算符： (条件)?值1:值2</code></pre><h4 id="4-流程控制"><a href="#4-流程控制" class="headerlink" title="4.流程控制"></a>4.流程控制</h4><pre><code>1. if语句：语法和java类似。
+2. switch语句：同上。
+3. while语句：
+4. do-while语句：do{}while()
+5. for语句：
+6. break
+7. continue</code></pre><h4 id="5-函数"><a href="#5-函数" class="headerlink" title="5.函数"></a>5.函数</h4><p>函数定义语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function 函数名(参数1，参数2，...)&#123;</span><br><span class="line">	函数代码;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="二、js对象"><a href="#二、js对象" class="headerlink" title="二、js对象"></a>二、js对象</h3><p>javascript是一种基于对象和事件驱动的脚本语言，其没有提供抽象、继承、重载等特征。对象在javascript中是一种特殊的数据，每个对象都有它自己的属性、事件和方法。</p>
+<ol>
+<li><p>内置对象<br>主要包括字符串对象、数组对象、日期对象、数学对象、逻辑对象、正则表达式对象等。</p>
+<ol>
+<li><p>字符串对象</p>
+<p> 创建：</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var str1&#x3D;&#39;first String&#39;</span><br><span class="line">var str2&#x3D;new String(&#39;first String&#39;)</span><br></pre></td></tr></table></figure>
+<p> 属性：</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">length:获取对象中字符的个数。</span><br><span class="line">protorype:用于扩展对象的属性和方法。</span><br></pre></td></tr></table></figure>
+<p> 方法：</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">显示、检索、拼接、大小写转换、定位、匹配。</span><br></pre></td></tr></table></figure></li>
+<li><p>日期对象</p>
+<p> 日期对象可以分为两部分：日期和时间。日期包括年、月、日和星期。时间包括小时、分钟、秒、毫秒。<br> 创建日期对象</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var d1&#x3D;new Date();</span><br><span class="line">var d2&#x3D;new Date(&quot;Jan 1,2013&quot;);</span><br><span class="line">var d3&#x3D;new Date(2013,1,1,20,30,40);</span><br><span class="line">var d4&#x3D;new Date(400000);</span><br></pre></td></tr></table></figure>
+<p> 获取日期和时间</p>
+<pre><code>get前缀方法</code></pre><table>
+<thead>
+<tr>
+<th>方法</th>
+<th align="right">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>getFullYear(),getUTCFullYear()</td>
+<td align="right">返回4位数字年份</td>
+</tr>
+<tr>
+<td>getMonth(),getUTVMonth()</td>
+<td align="right">返回月份(0~11)</td>
+</tr>
+<tr>
+<td>getDate(),getUTCDate()</td>
+<td align="right">返回日期中的天数(1~31)</td>
+</tr>
+<tr>
+<td>getDay(),getUTCDate()</td>
+<td align="right">返回星期(0~6)</td>
+</tr>
+<tr>
+<td>getHours(),getUTCHours()</td>
+<td align="right">返回小时</td>
+</tr>
+<tr>
+<td>getMinutes(),getUTCMinutes</td>
+<td align="right">返回分钟</td>
+</tr>
+<tr>
+<td>getSeconds(),getUTCSeconds()</td>
+<td align="right">返回秒</td>
+</tr>
+<tr>
+<td>getMilliseconds(),getUTCMilliseconds()</td>
+<td align="right">返回毫秒</td>
+</tr>
+<tr>
+<td>getTime()</td>
+<td align="right">返回距1970年1月1日的毫秒数</td>
+</tr>
+<tr>
+<td>getTimezoneOffset()</td>
+<td align="right">返回本地与格林威治的分钟差</td>
+</tr>
+</tbody></table>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">例子：</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot;&gt;</span><br><span class="line">var d1&#x3D;new Date();</span><br><span class="line">document.write(&quot;当前日期：&quot;+d1+&quot;&lt;hr&gt;&quot;);</span><br></pre></td></tr></table></figure>
+<p> </script><br> set前缀方法</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th align="right">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>setFullYear(),setUTCFullYear()</td>
+<td align="right">设置4位数字年份</td>
+</tr>
+<tr>
+<td>setMonth(),setUTCMonth()</td>
+<td align="right">设置月份</td>
+</tr>
+<tr>
+<td>setDate(),setUTCDate()</td>
+<td align="right">设置月份的 某一天</td>
+</tr>
+<tr>
+<td>setHours(),setUTCHours()</td>
+<td align="right">设置小时</td>
+</tr>
+<tr>
+<td>setMinutes(),setUTCMinutes()</td>
+<td align="right">设置分钟</td>
+</tr>
+<tr>
+<td>setSeconds(),setUTCSeconds()</td>
+<td align="right">设置秒</td>
+</tr>
+<tr>
+<td>setMillseconds(),setUTCMillseconds()</td>
+<td align="right">设置毫秒</td>
+</tr>
+<tr>
+<td>setTime()</td>
+<td align="right">以毫秒设置Date对象</td>
+</tr>
+</tbody></table>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">例子：</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot;&gt;</span><br><span class="line">var d1&#x3D;new Date();</span><br><span class="line">d1.setFullYear(2020,11,12);</span><br><span class="line">document.write(&quot;今天的日期是：&quot;+d1.getFullYear());</span><br></pre></td></tr></table></figure></li>
+<li><p>数学对象：数学对象没有构造函数Math()，不能像Date和String那样使用new创建，其属性和方法都可以直接访问。</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th align="right">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Math.E</td>
+<td align="right">自然底数e</td>
+</tr>
+<tr>
+<td>Math.LN2</td>
+<td align="right">2的自然对数</td>
+</tr>
+<tr>
+<td>Math.LN10</td>
+<td align="right">10的自然对数</td>
+</tr>
+<tr>
+<td>Math.LOG2E</td>
+<td align="right">以2为底e的对数</td>
+</tr>
+<tr>
+<td>Math.LOG10E</td>
+<td align="right">yi10为底e的对数</td>
+</tr>
+<tr>
+<td>Math.PI</td>
+<td align="right">圆周率</td>
+</tr>
+<tr>
+<td>Math.SQRT1_2</td>
+<td align="right">2的平方根的倒数，约0.707</td>
+</tr>
+<tr>
+<td>Math.SQRT2</td>
+<td align="right">返回2的平方根，约1.414</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th align="right">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Math.abs(x)</td>
+<td align="right"></td>
+</tr>
+<tr>
+<td>Math.cos(x)</td>
+<td align="right"></td>
+</tr>
+<tr>
+<td>Math.sin(x)</td>
+<td align="right"></td>
+</tr>
+<tr>
+<td>Math.log(x)</td>
+<td align="right"></td>
+</tr>
+<tr>
+<td>Math.exp(x)</td>
+<td align="right">返回e的指数</td>
+</tr>
+<tr>
+<td>Math.sqrt(x)</td>
+<td align="right"></td>
+</tr>
+<tr>
+<td>Math.random(x)</td>
+<td align="right"></td>
+</tr>
+<tr>
+<td>Math.tan(x)</td>
+<td align="right"></td>
+</tr>
+<tr>
+<td>Math.toSource()</td>
+<td align="right">返回对象的源代码</td>
+</tr>
+</tbody></table>
+</li>
+</ol>
+</li>
+<li><p>宿主对象:所有的BOM和文档对象模型DOM都是宿主对象</p>
+<ol>
+<li>浏览器对象模型：BOM-windows对象<ol>
+<li>windows对象的属性<table>
+<thead>
+<tr>
+<th>属性</th>
+<th align="right">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>closed</td>
+<td align="right">返回窗口 是否已被关闭</td>
+</tr>
+<tr>
+<td>deefaultStatus</td>
+<td align="right">设置或返回窗口状态栏中的默认文本</td>
+</tr>
+<tr>
+<td>document</td>
+<td align="right">对document对象的只读引用</td>
+</tr>
+<tr>
+<td>history</td>
+<td align="right">对history对象的制度引用</td>
+</tr>
+<tr>
+<td>length</td>
+<td align="right">设置或返回集合中对象的数目</td>
+</tr>
+<tr>
+<td>location</td>
+<td align="right">用于窗口的location对象</td>
+</tr>
+<tr>
+<td>name</td>
+<td align="right">设置或返回窗口的名称</td>
+</tr>
+<tr>
+<td>navigator</td>
+<td align="right">对navigator对象的只读引用</td>
+</tr>
+<tr>
+<td>opener</td>
+<td align="right">返回对创建此窗口的引用</td>
+</tr>
+<tr>
+<td>pageXOffset</td>
+<td align="right">数字或返回当前页面相对于窗口显示区左上角的x位置</td>
+</tr>
+<tr>
+<td>pageYOffset</td>
+<td align="right">数字或返回当前页面相对于窗口显示区左上角的y位置</td>
+</tr>
+<tr>
+<td>self</td>
+<td align="right">返回对当前窗口的引用，等加于window属性</td>
+</tr>
+<tr>
+<td>status</td>
+<td align="right">设置窗口状态栏的文本</td>
+</tr>
+<tr>
+<td>top</td>
+<td align="right">返回最顶层的祖先窗口</td>
+</tr>
+</tbody></table>
+</li>
+<li>windows对象的方法<table>
+<thead>
+<tr>
+<th>方法</th>
+<th align="right">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>alert()</td>
+<td align="right">显示带有一段信息和一个‘确认’按钮的警告栏</td>
+</tr>
+<tr>
+<td>blur()</td>
+<td align="right">键盘焦点从顶层窗口移开</td>
+</tr>
+<tr>
+<td>clearInterval()</td>
+<td align="right">取消周期性执行代码</td>
+</tr>
+<tr>
+<td>clearTimeout()</td>
+<td align="right">取消超时的操作</td>
+</tr>
+<tr>
+<td>close()</td>
+<td align="right">关闭浏览器窗口</td>
+</tr>
+<tr>
+<td>confirm()</td>
+<td align="right">显示带有一段信息以及‘确认’‘取消’按钮的对话框</td>
+</tr>
+<tr>
+<td>focus()</td>
+<td align="right">将键盘焦点给予一个窗口</td>
+</tr>
+<tr>
+<td>moveBy()</td>
+<td align="right">窗口相当当前位置移动指定的像素</td>
+</tr>
+<tr>
+<td>moveTo()</td>
+<td align="right">移动浏览器窗口左上角位于用户屏幕指定坐标(x,y)处</td>
+</tr>
+<tr>
+<td>open()</td>
+<td align="right">打开一个新的浏览器窗口或查找一个已命名的窗口</td>
+</tr>
+<tr>
+<td>prompt()</td>
+<td align="right">显示可提示用户输入的对话框</td>
+</tr>
+<tr>
+<td>resizeTo()</td>
+<td align="right">把窗口的大小调整为指定宽度和高度（不能为负）</td>
+</tr>
+<tr>
+<td>resizeBy()</td>
+<td align="right">相对当前窗口大小调整宽度和高度</td>
+</tr>
+<tr>
+<td>scroll()</td>
+<td align="right">滚动窗口中的文档</td>
+</tr>
+<tr>
+<td>scrollBy()</td>
+<td align="right">按照指定的像素值来滚动内容</td>
+</tr>
+<tr>
+<td>scrollTo()</td>
+<td align="right">把内容滚动到指定的坐标</td>
+</tr>
+<tr>
+<td>setInterval()</td>
+<td align="right">指定周期性执行代码（以毫秒计）</td>
+</tr>
+<tr>
+<td>setTimeout()</td>
+<td align="right">在指定的毫秒数后调用函数或计算表达式</td>
+</tr>
+<tr>
+<td>print()</td>
+<td align="right">打印当前窗口的内容</td>
+</tr>
+</tbody></table>
+</li>
+<li>window子对象<ul>
+<li>screen对象：运行时自动产生，描述计算机屏幕的尺寸、颜色等。静态只读；</li>
+<li>history对象：存储浏览器最近浏览过的历史网址，支持三种方法在浏览器窗口中前进和后退，froward()和back()。如window.history.go(-1)表示后退一页。</li>
+<li>navigator对象：浏览器信息；</li>
+<li>location对象：代表浏览器窗口中当前显示的文档的URL，通过地址对象可以访问当前文档的URL的各个部分。如location.href=”<a href="http://www.baidu.com&quot;表示跳转到baidu；location.replace(&quot;http://www.baidu.com&quot;)表示用百度代替当前文档。" target="_blank" rel="noopener">http://www.baidu.com&quot;表示跳转到baidu；location.replace(&quot;http://www.baidu.com&quot;)表示用百度代替当前文档。</a></li>
+</ul>
+</li>
+</ol>
+</li>
+<li>文档对象模型: DOM-document对象，包括document对象、body对象、button对象、form对象、frame对象、image对象、object对象等。<ol>
+<li>document对象的属性<table>
+<thead>
+<tr>
+<th>属性</th>
+<th align="right">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>title</td>
+<td align="right">设置文档标题</td>
+</tr>
+<tr>
+<td>bgColor</td>
+<td align="right">设置页面背景</td>
+</tr>
+<tr>
+<td>fgColor</td>
+<td align="right">设置网页文本默认颜色</td>
+</tr>
+<tr>
+<td>linkColor</td>
+<td align="right">设置网页默认链接颜色</td>
+</tr>
+<tr>
+<td>alinkColor</td>
+<td align="right">设置被激活链接颜色</td>
+</tr>
+<tr>
+<td>vlinkColor</td>
+<td align="right">设置被单机过的连接颜色</td>
+</tr>
+<tr>
+<td>url</td>
+<td align="right">设置url属性从而在同一窗口打开另一个网页</td>
+</tr>
+<tr>
+<td>fileCreatedDate</td>
+<td align="right">显示文件建立日期，只读属性</td>
+</tr>
+<tr>
+<td>fileModifiedDate</td>
+<td align="right">显示文件修改日期，只读属性</td>
+</tr>
+<tr>
+<td>lastModified</td>
+<td align="right">显示文档最近修改日期，只读属性</td>
+</tr>
+<tr>
+<td>fileSize</td>
+<td align="right">显示文件大小</td>
+</tr>
+<tr>
+<td>cookie</td>
+<td align="right">设置和读取cookie</td>
+</tr>
+<tr>
+<td>charset</td>
+<td align="right">设置字符集为GB2312简体中文</td>
+</tr>
+</tbody></table>
+</li>
+<li>document对象的方法<table>
+<thead>
+<tr>
+<th>方法</th>
+<th align="right">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>open()</td>
+<td align="right">打开一个新文档以便javascript能在文档的当前位置写入数据。</td>
+</tr>
+<tr>
+<td>close</td>
+<td align="right">表示关闭文档，停止写入数据</td>
+</tr>
+<tr>
+<td>clear()</td>
+<td align="right">表示清空当前文档</td>
+</tr>
+<tr>
+<td>write()writeln()</td>
+<td align="right">用于向文档写入数据，所写入的内容会被当成标准文档HTML来处理。</td>
+</tr>
+</tbody></table>
+</li>
+<li>document子对象<br> image子对象：</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="三、js事件响应"><a href="#三、js事件响应" class="headerlink" title="三、js事件响应"></a>三、js事件响应</h3><p><strong>基本流程：</strong> 设置html相应事件元素-&gt;设置元素响应类型-&gt;设置相应程序。</p>
+<ol>
+<li>鼠标事件：<ul>
+<li>元素：image、link、radio、button、checkbox</li>
+<li>事件处理器：onclick、onmousedown、onmouseup、onmousemove、onmouseover、onmouseout、ondbclick</li>
+</ul>
+</li>
+<li>键盘事件：<ul>
+<li>常用事件：onkeyup、onkeydown、onkeypress等</li>
+</ul>
+</li>
+<li>表单事件：</li>
+</ol>
+<h5 id="参考资料：网页设计与制作-html5-css-javascript-第二晚-赵峰-清华大学出版社-2013"><a href="#参考资料：网页设计与制作-html5-css-javascript-第二晚-赵峰-清华大学出版社-2013" class="headerlink" title="参考资料：网页设计与制作-html5+css+javascript(第二晚).赵峰.清华大学出版社.2013"></a>参考资料：网页设计与制作-html5+css+javascript(第二晚).赵峰.清华大学出版社.2013</h5>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/04/07/js%E5%9F%BA%E7%A1%801/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-设计模式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/02/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">设计模式</a>
+    </h1>
+  
+
+        
+        <a href="/2020/04/02/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
+  	<time datetime="2020-04-02T12:12:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/04/02/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-古代刑罚拔掉舌头后如何生活" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/02/%E5%8F%A4%E4%BB%A3%E5%88%91%E7%BD%9A%E6%8B%94%E6%8E%89%E8%88%8C%E5%A4%B4%E5%90%8E%E5%A6%82%E4%BD%95%E7%94%9F%E6%B4%BB/">古代刑罚拔掉舌头后如何生活</a>
+    </h1>
+  
+
+        
+        <a href="/2020/04/02/%E5%8F%A4%E4%BB%A3%E5%88%91%E7%BD%9A%E6%8B%94%E6%8E%89%E8%88%8C%E5%A4%B4%E5%90%8E%E5%A6%82%E4%BD%95%E7%94%9F%E6%B4%BB/" class="archive-article-date">
+  	<time datetime="2020-04-02T11:45:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/04/02/%E5%8F%A4%E4%BB%A3%E5%88%91%E7%BD%9A%E6%8B%94%E6%8E%89%E8%88%8C%E5%A4%B4%E5%90%8E%E5%A6%82%E4%BD%95%E7%94%9F%E6%B4%BB/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-tomcat-404" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
